@@ -22,15 +22,7 @@ steps:
   inputs:
     SonarQube: 'sonartoken'
     scannerMode: 'CLI'
-    configMode: 'manual'
-    cliProjectKey: 'praju829_fake-vulnerabilities-java-maven'
-    cliProjectName: 'fake-vulnerabilities-java-maven'
-    cliSources: '.'
-    extraProperties: |
-      # Additional properties that will be passed to the scanner, 
-      # Put one key=value per line, example:
-      # sonar.exclusions=**/*.bin
-      sonar.java.binaries.
+    configMode: 'file'
 - task: SonarQubePublish@5
   inputs:
     pollingTimeoutSec: '300'
